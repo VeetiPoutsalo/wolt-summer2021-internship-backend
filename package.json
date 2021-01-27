@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn build && node -r dotenv/config ./build/index.js",
+    "start-no-build": "node -r dotenv/config ./build/index.js",
     "build": "tsc -p tsconfig.json",
     "dev": "nodemon -r dotenv/config src/index.ts",
     "lint": "yarn eslint . --fix"
