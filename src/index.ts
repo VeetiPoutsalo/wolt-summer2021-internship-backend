@@ -1,11 +1,13 @@
 import express from 'express'
+import restaurants from './data/restaurants.json'
 
 const PORT = process.env.PORT || 8000
 
 const app = express()
 
-app.get('/', (_req, res) => {
-	res.send('Hello World!')
+// Debug endpoint to get all restaurants
+app.get('/restaurants', (_req, res) => {
+	res.send(restaurants)
 })
 
 app.listen(PORT, () => {
