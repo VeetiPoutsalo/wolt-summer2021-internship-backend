@@ -6,11 +6,12 @@
   "author": "Veeti Poutsalo <veeti@poutsalo.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn build && node ./build/index.js",
+    "start": "yarn build && node -r dotenv/config ./build/index.js",
     "build": "tsc -p tsconfig.json",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon -r dotenv/config src/index.ts"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   },
   "devDependencies": {

@@ -3,3 +3,6 @@ node_modules
 
 # Built TypeScript
 build
+
+# Environment files
+.env
